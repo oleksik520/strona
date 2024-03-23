@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALERIA</title>
+
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oswald:wght@200..700&display=swap');
+
+        #container{
+            height: auto;
+            width: auto;
+            position: fixed;
+        }
+        .background{
+            height: auto;
+            width: auto;
+            position: fixed;
+            scale: 80%;
+            margin-left: -5.3cm;
+            margin-top: -4.5cm;
+            opacity: 0.8;
+            filter: grayscale(70%);
+            z-index: 1;
+        }
+        .text1{
+            color: black;
+            font-family: "Comic Neue";
+            font-size: 70px;
+            opacity: 1;
+            position: fixed;
+            z-index: 2;
+            margin-top: -50px;
+            margin-left: 616px;
+        }
+        .div_zdjecia{
+            border-style: solid;        
+            border-color: black;
+            border-width: 10px;
+            border-radius: 30px;
+            background: linear-gradient(white, pink);
+            z-index: 3;
+            opacity: 1;
+            height: 600px;
+            width: 1200px;
+            position: fixed;
+            margin-top: 3cm;
+            margin-left: 4cm;
+            margin-right: 4cm;
+            box-shadow: 0px 0px 70px;
+        }
+        .zdjecie1{
+            position: fixed;
+            scale: 0.2;
+            margin-top: -12cm;
+            margin-left: -6cm;
+            box-shadow: 10px 10px 10px;
+            border-radius: 100%;
+        }
+        @keyframes zdjecie1 {
+            from{
+                box-shadow: 10px 10px 10px;
+                color: white;
+            }
+            to{
+                box-shadow: 50px 50px 50px;
+                color: pink;
+            }
+        }
+        
+        .zdjecie1{
+            animation: zdjecie1 1s infinite;
+        }
+        .zdjecie2{
+            position: fixed;
+            scale: 0.2;
+            margin-top: -12cm;
+            border-radius: 100%;
+        }
+        @keyframes zdjecie2 {
+            from{
+                box-shadow: 10px 10px 10px;
+                color: white;
+            }
+            to{
+                box-shadow: 50px 50px 50px;
+                color: pink;
+            }
+        }
+        .zdjecie2{
+            animation: zdjecie2 1s infinite;
+        }
+        .zdjecie3{
+            position: fixed;
+            scale: 0.2;
+            margin-top: -12cm;
+            margin-left: 6cm;
+            border-radius: 100%;
+        }
+        @keyframes zdjecie3 {
+            from{
+                box-shadow: 10px 10px 10px;
+                color: white;
+            }
+            to{
+                box-shadow: 50px 50px 50px;
+                color: pink;
+            }
+        }
+        .zdjecie3{
+            animation: zdjecie3 1s infinite;
+        }
+        .zdjecie4{
+            position: fixed;
+            scale: 0.2;
+            margin-top: -12cm;
+            margin-left: 13.5cm;
+            border-radius: 100%;
+        }
+        @keyframes zdjecie4 {
+            from{
+                box-shadow: 10px 10px 10px;
+                color: white;
+            }
+            to{
+                box-shadow: 50px 50px 50px;
+                color: pink;
+            }
+        }
+        .zdjecie4{
+            animation: zdjecie4 1s infinite;
+        }
+        .zdjecie5{
+            position: fixed;
+            scale: 0.2;
+            margin-top: -12cm;
+            margin-left: 14.5cm;
+            border-radius: 100%;
+        }
+        @keyframes zdjecie5 {
+            from{
+                box-shadow: 10px 10px 10px;
+                color: white;
+            }
+            to{
+                box-shadow: 50px 50px 50px;
+                color: pink;
+            }
+        }
+        .zdjecie5{
+            animation: zdjecie5 1s infinite;
+        }
+
+        .text2{
+            font-family: "Comic Neue";
+            font-size: 60px;
+            color: red;
+            margin-top: 400px;
+            margin-left: 80px;
+            position: fixed;
+        }
+        .hamburger{
+            height: 70px;
+            width: 70px;
+            position: fixed;
+            z-index: 10;
+            background: none;
+            border-style: none;
+            border-radius: 100%;
+            margin-left: -10px;
+        }
+
+        @keyframes hamburgerfocus {
+            from{
+                height: 70px;
+                width: 70px;
+                position: fixed;
+                z-index: 10;
+                border-radius: 100%;
+            }
+            to{
+                width: 200px;
+                height: 750px;
+                background-color: black;
+                position: fixed;
+                z-index: 10;
+                border-top-right-radius: 10%;
+                border-bottom-right-radius: 10%;
+                border-top-left-radius: 0%;
+                border-bottom-left-radius:0% ;
+            }
+        }
+        @keyframes hamburgernotfocus {
+            from{
+                width: 200px;
+                height: 750px;
+                background-color: black;
+                position: fixed;
+                z-index: 10;
+                border-top-right-radius: 10%;
+                border-bottom-right-radius: 10%;
+                border-top-left-radius: 0%;
+                border-bottom-left-radius: 0%;
+            }
+            to{
+                height: 70px;
+                width: 70px;
+                position: fixed;
+                z-index: 10;
+                border-radius: 100%;
+            }
+        }
+
+        .hamburger:focus{
+            animation: hamburgerfocus 0.5s forwards;
+            z-index: 10;
+        }
+        .hamburger:not(:focus){
+            animation: hamburgernotfocus 0.5s forwards;
+            z-index: 10;
+        }
+
+        .text_1{
+            font-size: 30px;
+            margin-left: -0.1cm;
+            opacity: 0;
+            font-family: Verdana;
+            z-index: 100;
+            display: flex;
+            position: fixed;
+            margin-top: -10cm;
+            margin-left: 0.8cm;
+        }
+        @keyframes text_1_hover {
+            from{
+                font-size: 30px;
+                color: white;
+                opacity: 1;
+            }
+            to{
+                font-size: 50px;
+                color: yellowgreen;
+                opacity: 1;
+            }
+        }
+        @keyframes text_1_not_hover {
+            from{
+                font-size: 50px;
+                color: yellowgreen;
+                opacity: 1;
+            }
+            to{
+                font-size: 30px;
+                color: white;
+                opacity: 1;
+            }
+        }
+        .hamburger:focus .text_1:hover{
+            animation: text_1_hover 1s forwards;
+        }
+        .hamburger:focus .text_1:not(:hover){
+            animation: text_1_not_hover 1s forwards;
+        }
+        .hamburger:not(:focus) .text_1:hover{
+            opacity: 0;
+        }
+        .hamburger:not(:focus) .text_1:not(:hover){
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="background">    
+            <img src="F:\PROJEKT 1 (IN PROGRESS)\PROJECT_CANVA\TŁO\Projekt bez nazwy.png">
+        </div>
+    </div>
+    <button class="hamburger">
+        <img src="F:\PROJEKT 1 (IN PROGRESS)\ZDJĘCIA_PO_CONVERSIA\1000_F_224136032_b11na6zJLTpORSjfauRdpKamQDc7Uejv-Photoroom.png-Photoroom.png" style="height: 70px; width: 70px;">
+            <a href="http://www.google.com/" style="text-decoration: none;">
+                <p class="text_1">
+                    MENU
+                </p>
+            </a>
+    </button>
+    
+    <div class="div_zdjecia">
+        <div class="zdjecie1">
+            <img src="1.jpg" style="border-radius: 100%;">
+        </div>
+        <div class="zdjecie2">
+            <img src="2.jpg" style="border-radius: 100%;">
+        </div>
+        <div class="zdjecie3">
+            <img src="3.jpg" style="border-radius: 100%;">
+        </div> 
+        <div class="zdjecie4">
+            <img src="4.jpg" style="border-radius: 100%;">
+        </div>
+        <div class="zdjecie5">
+            <img src="5.jpg" style="border-radius: 100%;">
+        </div>
+        <div class="text2">
+            <p>
+                <b>
+                    KOCHAM CIE SKARBIE BARDZO MOCNO
+                </b>
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
